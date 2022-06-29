@@ -1,11 +1,23 @@
-.job__item {
-	position: relative;
+.job-section {
+	@media screen and (max-width: 1199px) {
+		padding: 0;
+	}
+}
+
+.job {
+	display: none;
+	@media screen and (min-width: 1200px) {
+		display: block;
+	}
 }
 
 .job__list {
 	display: flex;
 	gap: 30px;
-	padding: 0;
+}
+
+.job__item {
+	position: relative;
 }
 
 .job__img-title {
