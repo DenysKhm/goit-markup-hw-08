@@ -93,6 +93,7 @@
 	font-family: var(--font-main);
 	text-decoration: none;
 	color: #212121;
+	transition: color var(--transition);
 	&:hover,
 	&:focus {
 		color: var(--accent-text-color);

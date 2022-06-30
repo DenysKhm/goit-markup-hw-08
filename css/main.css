@@ -823,6 +823,7 @@ img {
   font-family: var(--font-main);
   text-decoration: none;
   color: #212121;
+  transition: color var(--transition);
 }
 .mob-navigation__link:hover, .mob-navigation__link:focus {
   color: var(--accent-text-color);
