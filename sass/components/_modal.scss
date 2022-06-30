@@ -16,12 +16,15 @@
 	position: absolute;
 	width: 450px;
 	height: 609px;
-	top: 208px;
+	top: 93px;
 	left: 50%;
 	transform: translate(-50%) scale(1) rotate(0);
 	background-color: #fff;
 	transition: cubic-bezier(0.4, 0, 0.2, 1);
 	padding: 40px;
+	@media screen and (min-width: 768px) {
+		top: 208px;
+	}
 	@media screen and (min-width: 1200px) {
 		top: 221px;
 		width: 528px;
