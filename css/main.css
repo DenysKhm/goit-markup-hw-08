@@ -63,6 +63,7 @@ img {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -176,6 +177,10 @@ img {
   }
 }
 
+.contacts__link {
+  display: flex;
+  align-items: center;
+}
 @media screen and (min-width: 768px) {
   .contacts__link {
     font-family: var(--font-main);
@@ -213,10 +218,8 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .contacts__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -301,6 +304,7 @@ img {
 }
 
 .logo {
+  white-space: nowrap;
   display: block;
   font-weight: 700;
   font-size: 24px;
@@ -721,11 +725,9 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-@media screen and (min-width: 768px) {
-  .header .container {
-    display: flex;
-    align-items: center;
-  }
+.header__container {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -737,6 +739,12 @@ img {
 .header {
   border-bottom: 1px solid #ececec;
   position: relative;
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 .menu-open,
@@ -760,20 +768,35 @@ img {
 
 .menu-open__icon {
   fill: rgb(0, 0, 0);
+  transition: fill var(--transition);
+}
+.menu-open__icon:hover, .menu-open__icon:focus {
+  fill: var(--accent-text-color);
 }
 
 .menu-close__icon {
   fill: rgb(0, 0, 0);
+  transition: fill var(--accent-text-color);
+}
+.menu-close__icon:hover, .menu-close__icon:focus {
+  fill: var(--accent-text-color);
 }
 
 .mob-menu {
+  padding: 48px 40px;
   position: fixed;
   z-index: 1;
   background-color: #ffffff;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   top: 0;
   padding-top: 10px;
+  transform: translateX(100%);
+  left: 0;
+  transition: transform var(--transition);
+}
+.mob-menu.is-open {
+  transform: translateX(0);
 }
 .mob-menu .container {
   display: flex;
@@ -800,6 +823,9 @@ img {
   font-family: var(--font-main);
   text-decoration: none;
   color: #212121;
+}
+.mob-navigation__link:hover, .mob-navigation__link:focus {
+  color: var(--accent-text-color);
 }
 
 .mob-contacts__item:not(:last-child) {
@@ -834,7 +860,7 @@ img {
   display: flex;
 }
 
-.mob-soc__item {
+.mob-soc__item:not(:first-child) {
   margin-left: 10px;
 }
 
