@@ -141,7 +141,6 @@
 
 .mob-soc {
 	display: flex;
-	flex-wrap: wrap;
 }
 .mob-soc__item:not(:first-child) {
 	margin-left: 10px;
@@ -155,7 +154,7 @@
 }
 .mob-soc__link {
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 10px;
 	line-height: 1.22;
 	letter-spacing: 0.02em;
 	color: #2196f3;
